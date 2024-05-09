@@ -1,4 +1,4 @@
-package com.movieflix.movieApi.auth.utils;
+package com.movieflix.movieApi.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,14 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class RegisterRequest {
-
-    private String firstName;
-    private String lastName;
+public class UserDto {
     private String email;
     private String username;
-    private String password;
+    private String lastName;
+    private String firstName;
 }

@@ -26,8 +26,11 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotBlank(message = "The name field can`t be blank")
-    private String name;
+    @NotBlank(message = "The first name field can`t be blank")
+    private String firstName;
+
+    @NotBlank(message = "The last name field can`t be blank")
+    private String lastName;
 
     @NotBlank(message = "The username field can`t be blank")
     @Column(unique = true)
@@ -64,6 +67,10 @@ public class User implements UserDetails {
     @Override
     public String getUsername() {
         return email;
+    }
+
+    public String getLogin() {
+        return username;
     }
 
     @Override

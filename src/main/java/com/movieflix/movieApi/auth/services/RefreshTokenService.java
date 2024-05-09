@@ -29,7 +29,7 @@ public class RefreshTokenService {
         RefreshToken refreshToken = user.getRefreshToken();
 
         if (refreshToken == null) {
-            long refreshTokenValidity = 60*1000;
+            long refreshTokenValidity = 24 * 60 * 60 * 1000;
             refreshToken = RefreshToken
                     .builder()
                     .refreshToken(UUID.randomUUID().toString())

@@ -27,12 +27,14 @@ public class Movie {
     @Column(nullable = false)
     @NotBlank(message = "Please provide movie`s studio")
     private String studio;
-
     @ElementCollection
     @CollectionTable(name = "movie_cast")
     private Set<String> movieCast;
     @Column(nullable = false)
     private Integer releaseYear;
+    @Column(nullable = false)
+    @NotBlank(message = "Please provide movie`s file")
+    private String file;
     @Column(nullable = false)
     @NotBlank(message = "Please provide movie`s poster")
     private String poster;
